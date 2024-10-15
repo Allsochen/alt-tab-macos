@@ -1,0 +1,66 @@
+name: Swift Xcode CI
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+      - customize-appearance
+
+jobs:
+  build:
+    runs-on: macos-13
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Set up Xcode 13.4
+        run: sudo xcode-select -s /Applications/Xcode_13.4.app/Contents/Developer
+
+      - name: Install Homebrew packages
+        run: |
+          brew update
+          brew install vitorgalvao/tiny-scripts/cask-repair
+
+      - name: Set up environment variables
+        run: |
+          echo "IS_RELEASE=$(if [ \"$GITHUB_REF_NAME\" = \"master\" -a \"$GITHUB_EVENT_NAME\" = \"push\" ]; then echo true; else echo false; fi)" >> $GITHUB_ENV
+          echo "XCODE_BUILD_PATH=DerivedData/Build/Products/Release" >> $GITHUB_ENV
+          echo "VERSION_FILE=VERSION.txt" >> $GITHUB_ENV
+          echo "APP_NAME=$(awk -F ' = ' '/PRODUCT_NAME/ { print $2; }' < config/base.xcconfig)" >> $GITHUB_ENV
+
+      - name: Run custom install script
+        run: |
+          echo "Skipping default install step"
+
+      - name: Run build script
+        run: |
+          ./scripts/travis.sh
+
+      - name: Check build result
+        if: failure()
+        run: |
+          echo "build failed; exiting to prevent deploy phases"
+          sleep 2
+          exit 1
+          
+      - name: Deploy to GitHub Releases
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ${{ env.XCODE_BUILD_PATH }}/*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run after deploy script
+        run: |
+          ./scripts/after_deploy.sh
