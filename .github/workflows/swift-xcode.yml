@@ -46,6 +46,12 @@ jobs:
           echo "Skipping default install step"
 
       - name: Run build script
+        env:
+          APPCENTER_SECRET: ${{ vars.APPCENTER_SECRET }}
+          FEEDBACK_TOKEN: ${{ vars.FEEDBACK_TOKEN }}
+          APPLE_ID: ${{ vars.APPLE_ID }}
+          APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
+          APPLE_TEAM_ID: ${{ vars.APPLE_TEAM_ID }}
         run: |
           ./scripts/travis.sh
 
