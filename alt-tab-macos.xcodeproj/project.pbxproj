@@ -30,6 +30,7 @@
 		1C9614F589E212F9A768D936 /* titles_show_status_icons_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C9611039BDBE0C84F349BA1 /* titles_show_status_icons_light@2x.jpg */; };
 		1C96150A9E75C3D69638C481 /* app_icons_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C961359F2A8150F6020197A /* app_icons_light@2x.jpg */; };
 		1C9615D0A832BA53DC0D6628 /* thumbnails_show_windowless_apps_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C9615B6AF78072B8D78517B /* thumbnails_show_windowless_apps_light@2x.jpg */; };
+		1C9616A8791F026426840998 /* swift-xcode.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1C9619ABA703AADC5225C494 /* swift-xcode.yml */; };
 		1C9616BD426675F5E7FC1C97 /* thumbnails_hide_colored_circles_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C9618C8080211CBF882E4E0 /* thumbnails_hide_colored_circles_light@2x.jpg */; };
 		1C9617255736B51AD964C659 /* titles_show_preview_focused_window_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C961829BF43CE3D35FB6B90 /* titles_show_preview_focused_window_light@2x.jpg */; };
 		1C961742ED726F25F677772C /* thumbnails_show_running_windows_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C96153183B72B103867A9E3 /* thumbnails_show_running_windows_light@2x.jpg */; };
@@ -50,7 +51,6 @@
 		1C9619E0F49EA38E7DFFAFFC /* titles_hide_preview_focused_window_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C9616610337AE2361694C63 /* titles_hide_preview_focused_window_light@2x.jpg */; };
 		1C961A7F163A39BAFF1A8FB7 /* thumbnails_hide_windowless_apps_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C961B08E0A6C1F3C2669A58 /* thumbnails_hide_windowless_apps_light@2x.jpg */; };
 		1C961B13D88FBA5F6F68B8E2 /* titles_show_running_applications_windows_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C96168DC0D8707F8EC6B442 /* titles_show_running_applications_windows_light@2x.jpg */; };
-		1C961B145C7B76753FC70E7A /* swift-xcode.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1C9613E045FFF587DD90A61B /* swift-xcode.yml */; };
 		1C961BD37A4652E7A692ED8A /* thumbnails_show_running_applications_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C961484E5164C1BFF3B78FF /* thumbnails_show_running_applications_light@2x.jpg */; };
 		1C961C3245C17EC408B798DE /* app_icons_hide_preview_focused_window_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C961A9B3F8ABA1ECFDF7C9F /* app_icons_hide_preview_focused_window_light@2x.jpg */; };
 		1C961C7FC66CEEE4223C57A2 /* thumbnails_hide_space_number_labels_light@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C9611334B667767A4514B57 /* thumbnails_hide_space_number_labels_light@2x.jpg */; };
@@ -264,7 +264,6 @@
 		1C961334F059C39979BEDF19 /* app_icons_show_running_applications_windows_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app_icons_show_running_applications_windows_light@2x.jpg"; sourceTree = "<group>"; };
 		1C961359F2A8150F6020197A /* app_icons_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app_icons_light@2x.jpg"; sourceTree = "<group>"; };
 		1C961389E736411009044AF9 /* app_icons_hide_windowless_apps_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app_icons_hide_windowless_apps_light@2x.jpg"; sourceTree = "<group>"; };
-		1C9613E045FFF587DD90A61B /* swift-xcode.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "swift-xcode.yml"; sourceTree = "<group>"; };
 		1C96142EB71D683D7237C7ED /* app_icons_show_preview_focused_window_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app_icons_show_preview_focused_window_light@2x.jpg"; sourceTree = "<group>"; };
 		1C96145685B5DFCD24C58943 /* thumbnails_show_space_number_labels_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "thumbnails_show_space_number_labels_light@2x.jpg"; sourceTree = "<group>"; };
 		1C961484E5164C1BFF3B78FF /* thumbnails_show_running_applications_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "thumbnails_show_running_applications_light@2x.jpg"; sourceTree = "<group>"; };
@@ -289,6 +288,7 @@
 		1C96189E451343DFB9F27C66 /* app_icons_align_thumbnails_center_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app_icons_align_thumbnails_center_light@2x.jpg"; sourceTree = "<group>"; };
 		1C9618B3872558FBDE74D073 /* install_swiftformat.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = install_swiftformat.js; sourceTree = "<group>"; };
 		1C9618C8080211CBF882E4E0 /* thumbnails_hide_colored_circles_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "thumbnails_hide_colored_circles_light@2x.jpg"; sourceTree = "<group>"; };
+		1C9619ABA703AADC5225C494 /* swift-xcode.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = "swift-xcode.yml"; sourceTree = "<group>"; };
 		1C9619DEB8B7905DBF9A6030 /* titles_hide_tabs_as_windows_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "titles_hide_tabs_as_windows_light@2x.jpg"; sourceTree = "<group>"; };
 		1C961A0A3EF637793B0F9B89 /* thumbnails_align_thumbnails_leading_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "thumbnails_align_thumbnails_leading_light@2x.jpg"; sourceTree = "<group>"; };
 		1C961A9B3F8ABA1ECFDF7C9F /* app_icons_hide_preview_focused_window_light@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "app_icons_hide_preview_focused_window_light@2x.jpg"; sourceTree = "<group>"; };
@@ -612,14 +612,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C961003C1DFD45569537072 /* workflows */ = {
-			isa = PBXGroup;
-			children = (
-				1C9613E045FFF587DD90A61B /* swift-xcode.yml */,
-			);
-			path = workflows;
-			sourceTree = "<group>";
-		};
 		1C961658C754FEAB9B5F562B /* illustrations */ = {
 			isa = PBXGroup;
 			children = (
@@ -683,6 +675,14 @@
 				1C9616ABADF052D54E9375C2 /* info_button@2x.png */,
 			);
 			path = preferences;
+			sourceTree = "<group>";
+		};
+		1C961B4542D84D5B6E937B15 /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				1C9619ABA703AADC5225C494 /* swift-xcode.yml */,
+			);
+			path = workflows;
 			sourceTree = "<group>";
 		};
 		4807A6C423A9CD190052A53E /* Frameworks */ = {
@@ -1179,7 +1179,7 @@
 				D04BAD7008ED1D9CBC147A75 /* pull_request_template.md */,
 				D04BA7A56A2009957C939159 /* ISSUE_TEMPLATE */,
 				BF0C89F6EA16DD7322626E20 /* FUNDING.yml */,
-				1C961003C1DFD45569537072 /* workflows */,
+				1C961B4542D84D5B6E937B15 /* workflows */,
 			);
 			path = .github;
 			sourceTree = "<group>";
@@ -1756,8 +1756,8 @@
 				is,
 				nn,
 				th,
-				ml,
 				kn,
+				ml,
 			);
 			mainGroup = D04BA1463D2A17038222BB84;
 			productRefGroup = D04BA1A461BBB5A9BE15E015 /* Products */;
@@ -1937,7 +1937,7 @@
 				BF0C8DF4207B0BDC2178277B /* Localizable.strings in Resources */,
 				BF0C86BB79E417163E813179 /* InfoPlist.strings in Resources */,
 				BF0C81480366BAD71BC9A158 /* InfoPlist.strings in Resources */,
-				1C961B145C7B76753FC70E7A /* swift-xcode.yml in Resources */,
+				1C9616A8791F026426840998 /* swift-xcode.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
