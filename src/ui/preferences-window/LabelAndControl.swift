@@ -277,7 +277,7 @@ class LabelAndControl: NSObject {
 
     static func makeLabelWithSlider(_ labelText: String, _ rawName: String, _ minValue: Double, _ maxValue: Double,
                                     _ numberOfTickMarks: Int = 0, _ allowsTickMarkValuesOnly: Bool = false,
-                                    _ unitText: String = "", width: CGFloat = 200, extraAction: ActionClosure? = nil) -> [NSView] {
+                                    _ unitText: String = "", width: CGFloat = 250, extraAction: ActionClosure? = nil) -> [NSView] {
         let value = defaults.double(rawName)
         let formatter = MeasurementFormatter()
         formatter.numberFormatter = NumberFormatter()

@@ -94,7 +94,7 @@ class TableGroupSetView: NSStackView {
                     stackView.setCustomSpacing(0, after: spacerView)
                 }
                 stackView.addArrangedSubview(view)
-                stackView.setCustomSpacing(0, after: view)
+                stackView.setCustomSpacing(tableGroupSpacing, after: view)
             }
 
             continuousTableGroups.removeAll()

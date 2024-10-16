@@ -102,6 +102,7 @@ class Preferences {
         "hideWindowlessApps": "false",
         "hideThumbnails": "false",
         "previewFocusedWindow": "false",
+        "enabledCustomizeAppearanceSize": "false",
     ]
 
     // system preferences
@@ -111,6 +112,69 @@ class Preferences {
     // not exposed as preferences now but may be in the future, probably through macro preferences
 
     // persisted values
+    static var enabledCustomizeAppearanceSize: Bool { defaults.bool("enabledCustomizeAppearanceSize") }
+    static var maxWidthOnScreen: CGFloat {
+        get {
+            return defaults.cgfloat("maxWidthOnScreen") / CGFloat(100)
+        }
+        set {
+            Preferences.set("maxWidthOnScreen", newValue * CGFloat(100))
+        }
+    }
+
+    static var maxHeightOnScreen: CGFloat {
+        get {
+            return defaults.cgfloat("maxHeightOnScreen") / CGFloat(100)
+        }
+        set {
+            Preferences.set("maxHeightOnScreen", newValue * CGFloat(100))
+        }
+    }
+
+    static var windowMaxWidthInRow: CGFloat {
+        get {
+            return defaults.cgfloat("windowMaxWidthInRow") / CGFloat(100)
+        }
+        set {
+            Preferences.set("windowMaxWidthInRow", newValue * CGFloat(100))
+        }
+    }
+
+    static var windowMinWidthInRow: CGFloat {
+        get {
+            return defaults.cgfloat("windowMinWidthInRow") / CGFloat(100)
+        }
+        set {
+            Preferences.set("windowMinWidthInRow", newValue * CGFloat(100))
+        }
+    }
+
+    static var rowsCount: CGFloat {
+        get {
+            return defaults.cgfloat("rowsCount")
+        }
+        set {
+            Preferences.set("rowsCount", newValue)
+        }
+    }
+
+    static var iconSize: CGFloat {
+        get {
+            return defaults.cgfloat("iconSize")
+        }
+        set {
+            Preferences.set("iconSize", newValue)
+        }
+    }
+
+    static var fontHeight: CGFloat {
+        get {
+            return defaults.cgfloat("fontHeight")
+        }
+        set {
+            Preferences.set("fontHeight", newValue)
+        }
+    }
     static var holdShortcut: [String] { ["holdShortcut", "holdShortcut2", "holdShortcut3", "holdShortcut4", "holdShortcut5"].map { defaults.string($0) } }
     static var nextWindowShortcut: [String] { ["nextWindowShortcut", "nextWindowShortcut2", "nextWindowShortcut3", "nextWindowShortcut4", "nextWindowShortcut5"].map { defaults.string($0) } }
     static var focusWindowShortcut: String { defaults.string("focusWindowShortcut") }
@@ -1154,6 +1218,10 @@ extension UserDefaults {
 
     func bool(_ key: String) -> Bool {
         return getThenConvertOrReset(key, { s in Bool(s) })
+    }
+
+    func cgfloat(_ key: String) -> CGFloat {
+        return getThenConvertOrReset(key, { s in Int(s).flatMap { CGFloat($0) } })
     }
 
     func double(_ key: String) -> Double {
