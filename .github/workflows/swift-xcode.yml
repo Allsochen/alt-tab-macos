@@ -52,6 +52,8 @@ jobs:
           APPLE_ID: ${{ vars.APPLE_ID }}
           APPLE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
           APPLE_TEAM_ID: ${{ vars.APPLE_TEAM_ID }}
+          APPLE_P12_CERTIFICATE: ${{ secrets.APPLE_P12_CERTIFICATE }}
+          APPLE_P12_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_P12_CERTIFICATE_PASSWORD }}
         run: |
           ./scripts/travis.sh
 
