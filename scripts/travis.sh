@@ -8,7 +8,8 @@ xcodebuild -workspace alt-tab-macos.xcworkspace -scheme Release -showBuildSettin
 
 npm ci
 
-npx commitlint-travis
+# npx commitlint-travis
+npx commitlint
 scripts/ensure_generated_files_are_up_to_date.sh
 
 if [ $IS_RELEASE ]; then
